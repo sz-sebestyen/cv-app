@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useState } from "react";
+
+import ResetButton from "./components/ResetButton/ResetButton";
+import TextInput from "./components/TextInput/TextInput";
+import TextDisplay from "./components/TextDisplay/TextDisplay";
 
 function App() {
+  const [text, setText] = useState("");
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ResetButton setText={setText} />
+
+      <div className="container">
+        <TextInput setText={setText} value={text} />
+
+        <TextDisplay text={text} />
+      </div>
     </div>
   );
 }
