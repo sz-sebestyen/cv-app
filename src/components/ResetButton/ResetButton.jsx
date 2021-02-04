@@ -1,10 +1,6 @@
 const ResetButton = (props) => {
   return (
-    <button
-      className="resetBtn"
-      type="button"
-      onClick={(event) => props.setText("")}
-    >
+    <button {...props} className="resetBtn" type="button">
       Reset
     </button>
   );

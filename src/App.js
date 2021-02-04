@@ -9,12 +9,15 @@ function App() {
   const [text, setText] = useState("");
   return (
     <div className="App">
-      <ResetButton setText={setText} />
+      <ResetButton onClick={(event) => setText("")} />
 
       <div className="container">
-        <TextInput setText={setText} value={text} />
+        <TextInput
+          value={text}
+          onInput={(event) => setText(event.target.value)}
+        />
 
-        <TextDisplay text={text} />
+        <TextDisplay>{text}</TextDisplay>
       </div>
     </div>
   );

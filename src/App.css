@@ -1,4 +1,6 @@
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -23,6 +25,7 @@
   background-color: #555;
   color: white;
   height: 100%;
+  padding: 10px;
 }
 
 textarea {
@@ -30,6 +33,7 @@ textarea {
   resize: none;
   width: 100%;
   border: 1px solid #555;
+  padding: 10px;
 }
 
 .resetBtn {
