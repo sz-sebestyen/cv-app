@@ -26,6 +26,7 @@
   color: white;
   height: 100%;
   padding: 10px;
+  white-space: pre-line;
 }
 
 textarea {
